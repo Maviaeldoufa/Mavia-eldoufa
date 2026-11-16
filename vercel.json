@@ -5,8 +5,7 @@
   "outputDirectory": "dist",
   "functions": {
     "api/index.mjs": {
-      "maxDuration": 60,
-      "includeFiles": "{data/**,uploads/**}"
+      "includeFiles": "data/**"
     }
   },
   "rewrites": [
@@ -19,7 +18,7 @@
       "destination": "/api/index.mjs"
     },
     {
-      "source": "/((?!api/|uploads/|assets/|.*\\..*).*)",
+      "source": "/((?!api|uploads).*)",
       "destination": "/index.html"
     }
   ]
